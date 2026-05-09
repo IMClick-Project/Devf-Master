@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <h1>Password Generator</h1>
+
+        <section class="password-box">
+            <input type="text" id="password" placeholder="P4$5W0rD!" readonly>
+            <button id="copyBtn" class="copy-btn">COPY</button>
+        </section>
+
+        <section class="card">
+            <div class="length-header">
+                <label for="length">Character Length</label>
+                <span id="lengthValue">12</span>
+            </div>
+
+            <input type="range" id="length" min="8" max="30" value="12">
+
+            <label class="option">
+                <input type="checkbox" id="uppercase" checked>
+                Include Uppercase Letters
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="lowercase" checked>
+                Include Lowercase Letters
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="numbers" checked>
+                Include Numbers
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="symbols" checked>
+                Include Symbols
+            </label>
+
+            <div class="strength-box">
+                <span>STRENGTH</span>
+
+                <div class="strength-result">
+                    <span id="strengthText">MEDIUM</span>
+                    <div class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                GENERATE →
+            </button>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

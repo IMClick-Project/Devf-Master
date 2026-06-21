@@ -1,5 +1,3 @@
-// compras.js
-
 // Arreglo vacío para guardar los productos
 const listaDeCompras = [];
 

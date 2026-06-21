@@ -1,0 +1,12 @@
+{
+  "name": "planificador-viajes",
+  "version": "1.0.0",
+  "description": "Proyecto de introducción a ECMAScript usando un planificador de viajes.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Tu nombre",
+  "license": "MIT"
+}

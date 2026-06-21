@@ -7,6 +7,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Tu nombre",
+  "author": "IMCLICK-Project",
   "license": "MIT"
 }

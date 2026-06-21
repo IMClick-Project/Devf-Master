@@ -10,3 +10,6 @@ const iniciarApp = () => {
 
     mostrarItinerario();
 };
+
+// Ejecutar la aplicación
+iniciarApp();

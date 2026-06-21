@@ -7,6 +7,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "IMCLICK-Project",
+  "author": "IMClick-Project",
   "license": "MIT"
 }

@@ -1,0 +1,11 @@
+{
+  "name": "gestor-notas",
+  "version": "1.0.0",
+  "description": "Proyecto para gestionar notas personales usando Node.js y el módulo fs.",
+  "main": "gestorNotas.js",
+  "scripts": {
+    "start": "node gestorNotas.js"
+  },
+  "author": "IMClick-Project",
+  "license": "MIT"
+}

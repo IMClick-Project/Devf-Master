@@ -1,0 +1,12 @@
+{
+  "name": "divide-y-venceras-maximo",
+  "version": "1.0.0",
+  "description": "Proyecto para practicar Divide and Conquer encontrando el número máximo en un arreglo.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "IMClick-Project",
+  "license": "MIT"
+}

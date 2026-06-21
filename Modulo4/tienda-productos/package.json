@@ -1,0 +1,12 @@
+{
+  "name": "tienda-productos",
+  "version": "1.0.0",
+  "description": "Proyecto para practicar filter, sort y map con productos de una tienda online.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "IMClick-Project",
+  "license": "MIT"
+}

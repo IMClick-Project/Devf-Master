@@ -1,0 +1,12 @@
+{
+  "name": "lista-de-compras",
+  "version": "1.0.0",
+  "description": "Proyecto para gestionar una lista de compras usando arreglos y objetos en JavaScript.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "IMClick-¨Project",
+  "license": "MIT"
+}

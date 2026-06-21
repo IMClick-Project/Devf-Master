@@ -1,0 +1,12 @@
+{
+  "name": "dos-punteros-invitados",
+  "version": "1.0.0",
+  "description": "Proyecto para practicar el algoritmo de los dos punteros con una lista de invitados.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "IMClick-Project",
+  "license": "MIT"
+}

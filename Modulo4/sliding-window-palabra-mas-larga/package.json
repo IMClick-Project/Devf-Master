@@ -1,0 +1,12 @@
+{
+  "name": "sliding-window-palabra-larga",
+  "version": "1.0.0",
+  "description": "Proyecto para practicar Sliding Window encontrando la palabra más larga en una cadena de texto.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "IMClick-Project",
+  "license": "MIT"
+}

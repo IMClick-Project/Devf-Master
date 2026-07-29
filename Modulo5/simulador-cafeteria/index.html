@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simulador de Pedidos</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="contenedor">
+    <h1>☕ Cafetería Async</h1>
+
+    <p>
+      Agrega pedidos y observa cómo se preparan de manera asincrónica.
+    </p>
+
+    <button id="botonAgregar" type="button">
+      Agregar pedido
+    </button>
+
+    <section class="resumen">
+      <p>Pedidos totales: <span id="totalPedidos">0</span></p>
+      <p>En proceso: <span id="pedidosProceso">0</span></p>
+      <p>Completados: <span id="pedidosCompletados">0</span></p>
+    </section>
+
+    <section>
+      <h2>Lista de pedidos</h2>
+
+      <div id="listaPedidos" class="lista-pedidos">
+        <p id="mensajeVacio">
+          Todavía no hay pedidos.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

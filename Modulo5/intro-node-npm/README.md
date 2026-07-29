@@ -29,5 +29,4 @@ intro-node-npm/
 ├── index.js
 ├── planetas.js
 ├── package.json
-├── .gitignore
 └── README.md

@@ -1,0 +1,17 @@
+{
+  "name": "intro-node-npm",
+  "version": "1.0.0",
+  "description": "Aplicación de consola para registrar planetas favoritos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "explorar": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "planetas"
+  ],
+  "author": "IMClick-Proyect",
+  "license": "ISC"
+}

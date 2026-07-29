@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eef2f6;
+  color: #24313d;
+}
+
+.contenedor {
+  width: min(720px, 92%);
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+form,
+.resultado {
+  padding: 28px;
+  border-radius: 14px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.campo,
+fieldset {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  padding: 16px;
+  border: 1px solid #c8d2dc;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="file"] {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #aebbc6;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #2563eb;
+  border-color: transparent;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.error {
+  display: block;
+  min-height: 18px;
+  margin-top: 5px;
+  color: #b91c1c;
+}
+
+.invalido {
+  border-color: #b91c1c;
+}
+
+.resultado {
+  margin-top: 24px;
+}
+
+.resultado p {
+  margin: 8px 0;
+}

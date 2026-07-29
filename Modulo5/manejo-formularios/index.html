@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registro de Eventos</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="contenedor">
+    <h1>Registro de Evento</h1>
+
+    <form id="registroEvento" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre completo:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          autocomplete="name"
+        >
+        <small id="errorNombre" class="error"></small>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          autocomplete="email"
+        >
+        <small id="errorCorreo" class="error"></small>
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          placeholder="10 dígitos"
+          autocomplete="tel"
+        >
+        <small id="errorTelefono" class="error"></small>
+      </div>
+
+      <fieldset>
+        <legend>Intereses:</legend>
+
+        <label class="opcion">
+          <input
+            type="checkbox"
+            name="intereses"
+            value="Tecnología"
+          >
+          Tecnología
+        </label>
+
+        <label class="opcion">
+          <input
+            type="checkbox"
+            name="intereses"
+            value="Negocios"
+          >
+          Negocios
+        </label>
+
+        <label class="opcion">
+          <input
+            type="checkbox"
+            name="intereses"
+            value="Arte"
+          >
+          Arte
+        </label>
+
+        <small id="errorIntereses" class="error"></small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Horario preferido:</legend>
+
+        <label class="opcion">
+          <input
+            type="radio"
+            name="horario"
+            value="Mañana"
+          >
+          Mañana
+        </label>
+
+        <label class="opcion">
+          <input
+            type="radio"
+            name="horario"
+            value="Tarde"
+          >
+          Tarde
+        </label>
+
+        <label class="opcion">
+          <input
+            type="radio"
+            name="horario"
+            value="Noche"
+          >
+          Noche
+        </label>
+
+        <small id="errorHorario" class="error"></small>
+      </fieldset>
+
+      <div class="campo">
+        <label for="fecha">Fecha del evento:</label>
+        <input type="date" id="fecha" name="fecha">
+        <small id="errorFecha" class="error"></small>
+      </div>
+
+      <div class="campo">
+        <label for="hora">Hora preferida:</label>
+        <input type="time" id="hora" name="hora">
+        <small id="errorHora" class="error"></small>
+      </div>
+
+      <div class="campo">
+        <label for="archivo">
+          Documento de identificación:
+        </label>
+
+        <input
+          type="file"
+          id="archivo"
+          name="archivo"
+          accept=".pdf,.jpg,.jpeg,.png"
+        >
+
+        <small>
+          Opcional. PDF, JPG o PNG. Máximo 2 MB.
+        </small>
+
+        <small id="errorArchivo" class="error"></small>
+      </div>
+
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <section id="resultado" class="resultado" hidden>
+      <h2>Registro exitoso</h2>
+      <div id="datosRegistro"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

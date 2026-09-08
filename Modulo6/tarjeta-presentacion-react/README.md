@@ -1,16 +1,33 @@
-# React + Vite
+# Tarjeta de Presentación con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Workshop realizado con React y Vite.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Practicar los conceptos básicos de React mediante la creación de una tarjeta de presentación personal.
 
-## React Compiler
+## Conceptos utilizados
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Componentes funcionales
+- JSX
+- CSS
+- Renderizado de información estática
 
-## Expanding the ESLint configuration
+## Descripción
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+La aplicación muestra una tarjeta de presentación con información personal y profesional, incluyendo:
+
+- Nombre
+- Formación profesional
+- Descripción personal
+- Habilidades
+- Fotografía de perfil
+
+## Ejecutar el proyecto
+
+1. Instalar las dependencias:
+
+```bash
+npm install

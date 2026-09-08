@@ -1,0 +1,64 @@
+#root {
+  width: 100%;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #241018;
+}
+
+.tarjeta {
+  max-width: 800px;
+  padding: 40px;
+  border: 1px solid #6f3647;
+  border-radius: 20px;
+  background-color: #321822;
+  color: #f5eef1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.tarjeta h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.tarjeta h2 {
+  margin-bottom: 25px;
+  color: #d6b8c2;
+  font-size: 20px;
+}
+
+.tarjeta p {
+  line-height: 1.7;
+  color: #ddd0d5;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.habilidades span {
+  padding: 8px 14px;
+  border: 1px solid #b83b5e;
+  border-radius: 20px;
+  background-color: #401c29;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #b83b5e;
+}
+

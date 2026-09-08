@@ -1,0 +1,108 @@
+#root {
+  width: 100%;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #241018;
+}
+
+.app-tareas {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #321822;
+  color: #f5eef1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.app-tareas h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.reloj {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #d6b8c2;
+  font-size: 18px;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.formulario input {
+  padding: 12px;
+  border: 1px solid #6f3647;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.formulario button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b83b5e;
+  color: white;
+  cursor: pointer;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #6f3647;
+  border-radius: 10px;
+  background-color: #401c29;
+}
+
+.lista li div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lista span {
+  color: #d6b8c2;
+}
+
+.eliminar {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #722f42;
+  color: white;
+  cursor: pointer;
+}
+
+.total {
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #401c29;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media (max-width: 650px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+}

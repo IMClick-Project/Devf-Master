@@ -1,0 +1,64 @@
+#root {
+  width: 100%;
+}
+
+.contenedor {
+  min-height: 100vh;
+  padding: 30px;
+  background-color: #120c1c;
+  color: white;
+}
+
+.panel {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: #241532;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.panel h1,
+.panel h2 {
+  text-align: center;
+}
+
+.datos {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  background-color: #321d46;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #824bb5;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.boton-panel {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}

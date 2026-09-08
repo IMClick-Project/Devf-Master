@@ -1,0 +1,99 @@
+#root {
+  width: 100%;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #241018;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #321822;
+  color: #f5eef1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.encabezado h1 {
+  margin-bottom: 10px;
+}
+
+.encabezado p {
+  color: #d6b8c2;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #6f3647;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.formulario button,
+.reiniciar {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b83b5e;
+  color: white;
+  cursor: pointer;
+}
+
+.formulario button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mensaje {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mensaje.pista {
+  background-color: #4b2940;
+}
+
+.mensaje.exito {
+  background-color: #24533a;
+}
+
+.mensaje.advertencia {
+  background-color: #6b4c20;
+}
+
+.estadisticas {
+  margin-top: 20px;
+  text-align: center;
+  color: #d6b8c2;
+}
+
+.reiniciar {
+  display: block;
+  margin: 25px auto 0;
+}
+
+@media (max-width: 550px) {
+  .formulario {
+    flex-direction: column;
+  }
+}

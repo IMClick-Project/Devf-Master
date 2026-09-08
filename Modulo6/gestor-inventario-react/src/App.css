@@ -1,0 +1,116 @@
+#root {
+  width: 100%;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #241018;
+}
+
+.inventario {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #321822;
+  color: #f5eef1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.inventario h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.descripcion {
+  text-align: center;
+  color: #d6b8c2;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #6f3647;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b83b5e;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  border: 1px solid #6f3647;
+  border-radius: 12px;
+  background-color: #401c29;
+}
+
+.producto h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.producto p {
+  margin: 0;
+  color: #d6b8c2;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.eliminar {
+  background-color: #722f42;
+}
+
+.mensaje {
+  text-align: center;
+  color: #d6b8c2;
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    flex-direction: column;
+  }
+
+  .producto {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .acciones {
+    justify-content: center;
+  }
+}

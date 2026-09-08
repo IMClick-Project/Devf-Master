@@ -1,0 +1,166 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #241018;
+  color: #f5eef1;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #321822;
+  border-bottom: 1px solid #6f3647;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar a {
+  color: #d6b8c2;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.tarjeta,
+.tweet {
+  padding: 28px;
+  border-radius: 18px;
+  background-color: #321822;
+  border: 1px solid #6f3647;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formulario input {
+  padding: 12px;
+  border: 1px solid #6f3647;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button,
+.boton {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b83b5e;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.boton:hover {
+  opacity: 0.9;
+}
+
+.formulario-tweet {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario-tweet textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding: 14px;
+  border: 1px solid #6f3647;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweets {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #d6b8c2;
+}
+
+.tweet-header span {
+  font-size: 13px;
+}
+
+.tweet p {
+  line-height: 1.6;
+}
+
+.eliminar {
+  background-color: #922f3f;
+}
+
+.sin-tweets,
+.mensaje-error {
+  text-align: center;
+  color: #d6b8c2;
+}
+
+.mensaje-error {
+  color: #ff9ca9;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tweet-header {
+    flex-direction: column;
+  }
+}

@@ -1,16 +1,94 @@
-# React + Vite
+# DevfSeek — FrontEnd Avanzado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del proyecto
 
-Currently, two official plugins are available:
+DevfSeek es una aplicación web desarrollada con React y Vite, inspirada en la interfaz de plataformas de inteligencia artificial como DeepSeek.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este proyecto forma parte del Módulo 7 del curso de FrontEnd de DEVF.
 
-## React Compiler
+## Objetivo de la primera entrega
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Implementar la estructura inicial de una aplicación React, integrar Tailwind CSS para los estilos y utilizar React Hook Form para la validación de formularios.
 
-## Expanding the ESLint configuration
+El desarrollo se realiza en la rama `parte-1`, siguiendo buenas prácticas de control de versiones con Git y GitHub.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologías utilizadas
+
+- **React:** Desarrollo de componentes e interfaces.
+- **Vite:** Entorno de desarrollo y compilación.
+- **Tailwind CSS:** Diseño y estilos responsivos.
+- **React Hook Form:** Manejo y validación de formularios.
+- **Git y GitHub:** Control de versiones.
+
+## Funcionalidades implementadas
+
+- Interfaz con diseño oscuro.
+- Formulario para escribir consultas.
+- Validación de campos obligatorios.
+- Validación de longitud mínima de mensajes.
+- Visualización de los mensajes enviados.
+- Limpieza automática del formulario después de enviar.
+
+## Instalación y ejecución
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/IMClick-Project/Devf-Master.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd Devf-Master
+git switch parte-1
+cd Modulo7
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+## Estructura del proyecto
+
+```text
+Modulo7/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── PromptForm.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## Estado del proyecto
+
+Primera entrega: configuración inicial e implementación de la interfaz y el formulario.
+
+Las siguientes entregas permitirán agregar nuevas funcionalidades y mejorar la aplicación.
+
+## Repositorio
+
+https://github.com/IMClick-Project/Devf-Master
+
+**Rama de trabajo:** `parte-1`
+
+## Créditos
+
+Proyecto desarrollado con fines educativos para el curso de FrontEnd Avanzado de DEVF.
+
+Repositorio utilizado como referencia:
+
+https://github.com/carlosDevf/DevfSeek

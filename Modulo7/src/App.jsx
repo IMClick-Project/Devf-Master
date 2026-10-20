@@ -1,57 +1,115 @@
 
-import { useState } from 'react'
+import { useRef } from 'react'
 import PromptForm from './components/PromptForm'
+import History from './components/History'
+import { useChat } from './hooks/useChat'
+import { useOllama } from './hooks/useOllama'
 
 function App() {
-  const [messages, setMessages] = useState([])
+  const { state, dispatch } = useChat()
+  const { sendMessage, loading, error } = useOllama()
+  const sending = useRef(false)
 
-  const handleSend = (prompt) => {
-    setMessages((previous) => [
-      ...previous,
-      {
-        id: crypto.randomUUID(),
-        text: prompt,
-      },
-    ])
+  const activeChat = state.conversations.find(
+    chat => chat.id === state.activeId
+  )
+
+  const handleSend = async (prompt) => {
+    if (sending.current) return false
+    sending.current = true
+
+    const chatId = activeChat?.id ?? crypto.randomUUID()
+    const previousMessages = activeChat?.messages ?? []
+
+    if (!activeChat) {
+      dispatch({
+        type: 'CREATE_CHAT_WITH_ID',
+        payload: chatId,
+      })
+    }
+
+    const userMessage = {
+      role: 'user',
+      content: prompt,
+    }
+
+    dispatch({
+      type: 'ADD_MESSAGE',
+      payload: { chatId, message: userMessage },
+    })
+
+    try {
+      const answer = await sendMessage([
+        ...previousMessages,
+        userMessage,
+      ])
+
+      dispatch({
+        type: 'ADD_MESSAGE',
+        payload: {
+          chatId,
+          message: {
+            role: 'assistant',
+            content: answer,
+          },
+        },
+      })
+
+      return true
+    } catch (err) {
+      console.error('Error de Ollama:', err)
+      return false
+    } finally {
+      sending.current = false
+    }
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <header className="border-b border-gray-800 p-5">
-        <h1 className="text-2xl font-bold text-blue-400">
-          DevfSeek
+    <div className="min-h-screen bg-gray-950 text-white md:flex">
+      <History disabled={loading} />
+
+      <main className="flex min-w-0 flex-1 flex-col p-6">
+        <h1 className="mb-6 text-center text-3xl font-bold">
+          Chat con DeepSeek R1
         </h1>
-        <p className="text-sm text-gray-400">
-          Proyecto FrontEnd Avanzado - Parte 1
-        </p>
-      </header>
 
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center px-5 py-12">
-        <h2 className="mb-3 text-center text-3xl font-bold">
-          ¡Hola! ¿En qué puedo ayudarte?
-        </h2>
-
-        <p className="mb-10 text-center text-gray-400">
-          Escribe una consulta para comenzar.
-        </p>
-
-        <PromptForm onSend={handleSend} />
-
-        <section className="mt-10 w-full max-w-2xl space-y-4">
-          {messages.map((message) => (
+        <div className="mx-auto mb-6 w-full max-w-3xl flex-1 space-y-4">
+          {(activeChat?.messages ?? []).map((message, index) => (
             <div
-              key={message.id}
-              className="rounded-xl border border-gray-700 bg-gray-800 p-4"
+              key={index}
+              className={`rounded-xl p-4 ${
+                message.role === 'user'
+                  ? 'ml-8 bg-blue-900'
+                  : 'mr-8 bg-gray-800'
+              }`}
             >
-              <p className="mb-2 text-xs font-semibold text-blue-400">
-                Tu mensaje
+              <p className="mb-2 text-sm font-bold">
+                {message.role === 'user'
+                  ? 'Tú'
+                  : 'DeepSeek'}
               </p>
               <p className="whitespace-pre-wrap break-words">
-                {message.text}
+                {message.content}
               </p>
             </div>
           ))}
-        </section>
+
+          {loading && (
+            <p className="text-blue-400">
+              DeepSeek está pensando...
+            </p>
+          )}
+
+          {error && (
+            <p role="alert" className="text-red-400">
+              {error}
+            </p>
+          )}
+        </div>
+
+        <div className="mx-auto w-full max-w-3xl">
+          <PromptForm onSend={handleSend} loading={loading} />
+        </div>
       </main>
     </div>
   )

@@ -1,7 +1,7 @@
 
 import { useForm } from 'react-hook-form'
 
-function PromptForm({ onSend }) {
+function PromptForm({ onSend, loading }) {
   const {
     register,
     handleSubmit,
@@ -9,21 +9,24 @@ function PromptForm({ onSend }) {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => {
-    onSend(data.prompt)
-    reset()
+  const onSubmit = async (data) => {
+    const success = await onSend(data.prompt)
+
+    if (success) {
+      reset()
+    }
   }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full max-w-2xl rounded-2xl bg-gray-800 p-4 shadow-lg"
+      className="w-full rounded-2xl bg-gray-800 p-4"
     >
       <textarea
-        placeholder="Escribe tu pregunta..."
-        className="h-32 w-full resize-none rounded-xl bg-gray-900 p-4 text-white outline-none focus:ring-2 focus: ring-blue-500"
+        placeholder="Pregunta algo a DeepSeek..."
+        className="h-28 w-full resize-none rounded-xl bg-gray-900 p-4 text-white outline-none focus:ring-2 focus:ring-blue-500"
         {...register('prompt', {
-          required: 'Debes escribir una pregunta',
+          required: 'Escribe una pregunta',
           minLength: {
             value: 5,
             message: 'Escribe al menos 5 caracteres',
@@ -39,9 +42,10 @@ function PromptForm({ onSend }) {
 
       <button
         type="submit"
-        className="mt-4 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+        disabled={loading}
+        className="mt-3 rounded-xl bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:opacity-50"
       >
-        Enviar
+        {loading ? 'Pensando...' : 'Enviar'}
       </button>
     </form>
   )

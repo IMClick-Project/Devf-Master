@@ -31,7 +31,7 @@ En esta etapa se implementó:
 
 **Rama:** `parte-1`
 
-## 🤖 Segunda entrega — Parte 2
+## ✅ Segunda entrega — Parte 2
 
 En esta etapa se desarrolla la integración de inteligencia artificial mediante Ollama y DeepSeek R1.
 
@@ -47,6 +47,29 @@ En esta etapa se desarrolla la integración de inteligencia artificial mediante 
 - Indicadores de carga y manejo de errores.
 
 **Rama:** `parte-2`
+
+## ✅ Tercera entrega — Uso de useContext
+
+### Objetivo
+
+Implementar y utilizar Context API para compartir el estado global de la aplicación sin necesidad de pasar propiedades manualmente entre múltiples componentes.
+
+### Implementación
+
+- Creación de `ChatContext` utilizando `createContext`.
+- Implementación de `ChatProvider` para compartir el estado de la aplicación.
+- Creación del Custom Hook `useChat` utilizando `useContext`.
+- Integración con `useReducer` para administrar conversaciones y mensajes.
+- Acceso al estado compartido desde los componentes `App` y `History`.
+
+### Beneficios
+
+- Evita el prop drilling.
+- Centraliza la gestión del estado.
+- Facilita la comunicación entre componentes.
+- Mejora la organización y el mantenimiento del código.
+
+**Rama:** `parte-3`.
 
 ## ⚙️ Instalación del proyecto
 
